@@ -20,34 +20,34 @@ export const Navbar = () => {
     {
       category: t('nav.cat.dev'),
       items: [
-        { name: t('services.dev.webApps.title'), icon: Code, desc: t('services.dev.webApps.desc') },
-        { name: t('services.dev.mobileApps.title'), icon: Smartphone, desc: t('services.dev.mobileApps.desc') },
-        { name: t('services.dev.websites.title'), icon: Monitor, desc: t('services.dev.websites.desc') },
-        { name: t('services.dev.software.title'), icon: AppWindow, desc: t('services.dev.software.desc') },
+        { id: 'web-apps', name: t('services.dev.webApps.title'), icon: Code, desc: t('services.dev.webApps.desc') },
+        { id: 'mobile-apps', name: t('services.dev.mobileApps.title'), icon: Smartphone, desc: t('services.dev.mobileApps.desc') },
+        { id: 'websites', name: t('services.dev.websites.title'), icon: Monitor, desc: t('services.dev.websites.desc') },
+        { id: 'software-applications', name: t('services.dev.software.title'), icon: AppWindow, desc: t('services.dev.software.desc') },
       ]
     },
     {
       category: t('nav.cat.ai'),
       items: [
-        { name: t('services.ai.productShoot.title'), icon: Camera, desc: t('services.ai.productShoot.desc') },
-        { name: t('services.ai.chatbots.title'), icon: MessageSquare, desc: t('services.ai.chatbots.desc') },
-        { name: t('services.ai.agentic.title'), icon: Bot, desc: t('services.ai.agentic.desc') },
-        { name: t('services.ai.apps.title'), icon: Cpu, desc: t('services.ai.apps.desc') },
+        { id: 'ai-product-shoot', name: t('services.ai.productShoot.title'), icon: Camera, desc: t('services.ai.productShoot.desc') },
+        { id: 'ai-chatbots', name: t('services.ai.chatbots.title'), icon: MessageSquare, desc: t('services.ai.chatbots.desc') },
+        { id: 'agentic-ai', name: t('services.ai.agentic.title'), icon: Bot, desc: t('services.ai.agentic.desc') },
+        { id: 'ai-apps', name: t('services.ai.apps.title'), icon: Cpu, desc: t('services.ai.apps.desc') },
       ]
     },
     {
       category: t('nav.cat.marketing'),
       items: [
-        { name: t('services.marketing.seo.title'), icon: Search, desc: t('services.marketing.seo.desc') },
-        { name: t('services.marketing.social.title'), icon: Share2, desc: t('services.marketing.social.desc') },
+        { id: 'seo-optimization', name: t('services.marketing.seo.title'), icon: Search, desc: t('services.marketing.seo.desc') },
+        { id: 'social-media-marketing', name: t('services.marketing.social.title'), icon: Share2, desc: t('services.marketing.social.desc') },
       ]
     },
     {
       category: t('nav.cat.social'),
       items: [
-        { name: t('services.social.instagram.title'), icon: Instagram, desc: t('services.social.instagram.desc') },
-        { name: t('services.social.facebook.title'), icon: Facebook, desc: t('services.social.facebook.desc') },
-        { name: t('services.social.tiktok.title'), icon: PlaySquare, desc: t('services.social.tiktok.desc') },
+        { id: 'instagram-management', name: t('services.social.instagram.title'), icon: Instagram, desc: t('services.social.instagram.desc') },
+        { id: 'facebook-management', name: t('services.social.facebook.title'), icon: Facebook, desc: t('services.social.facebook.desc') },
+        { id: 'tiktok-management', name: t('services.social.tiktok.title'), icon: PlaySquare, desc: t('services.social.tiktok.desc') },
       ]
     }
   ];
@@ -104,7 +104,7 @@ export const Navbar = () => {
                           </h3>
                           <div className="space-y-4">
                             {section.items.map((item) => (
-                              <a key={item.name} href={`/#${item.name.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start gap-3 group/item">
+                              <Link key={item.name} to={`/services/${item.id}`} className="flex items-start gap-3 group/item">
                                 <div className="p-2 rounded-lg bg-white/5 group-hover/item:bg-[#8cc63f]/20 transition-colors">
                                   <item.icon className="w-5 h-5 text-gray-400 group-hover/item:text-[#8cc63f] transition-colors" />
                                 </div>
@@ -116,7 +116,7 @@ export const Navbar = () => {
                                     {item.desc}
                                   </div>
                                 </div>
-                              </a>
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -134,7 +134,7 @@ export const Navbar = () => {
           </div>
 
           <a href="/#portfolio" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav.portfolio')}</a>
-          <a href="/#pricing" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav.pricing')}</a>
+          <Link to="/pricing" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">{t('nav.pricing')}</Link>
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
@@ -186,19 +186,19 @@ export const Navbar = () => {
                   <div className="text-xl font-display font-medium text-white">{t('nav.services')}</div>
                   <div className="pl-4 space-y-4 border-l border-white/10">
                     {services.flatMap(s => s.items).map(item => (
-                      <a 
+                      <Link 
                         key={item.name} 
-                        href={`/#${item.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        to={`/services/${item.id}`}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="block text-gray-400 hover:text-[#8cc63f]"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
                 <a href="/#portfolio" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-display font-medium text-white">{t('nav.portfolio')}</a>
-                <a href="/#pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-display font-medium text-white">{t('nav.pricing')}</a>
+                <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-xl font-display font-medium text-white">{t('nav.pricing')}</Link>
                 <a href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4 px-6 py-3 rounded-full bg-[#8cc63f] text-[#050505] text-center font-semibold text-lg">
                   {t('nav.startProject')}
                 </a>

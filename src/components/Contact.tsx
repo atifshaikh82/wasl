@@ -65,7 +65,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-gray-500 uppercase tracking-wider mb-1">{t('contact.email')}</h4>
-                  <p className="text-lg font-medium text-white">hello@wasl.agency</p>
+                  <p className="text-lg font-medium text-white">hello@waslagency.net</p>
                 </div>
               </div>
               <div className="flex items-center gap-6">

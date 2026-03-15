@@ -1,0 +1,102 @@
+import React from 'react';
+import { motion } from 'motion/react';
+import { useLanguage } from '../context/LanguageContext';
+import { portfolioProjects } from '../data/portfolio';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+
+export const PortfolioPage = () => {
+  const { t, language } = useLanguage();
+  const isArabic = language === 'ar';
+
+  return (
+    <main className="pt-32 pb-24 bg-[#050505] min-h-screen">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#8cc63f]" />
+            <span className="text-sm font-medium text-gray-300 uppercase tracking-wider">
+              {isArabic ? 'أعمالنا' : 'Our Work'}
+            </span>
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-6"
+          >
+            {isArabic ? 'مشاريع' : 'Selected'}{' '}
+            <span className="text-[#8cc63f]">{isArabic ? 'مختارة' : 'Projects'}</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-xl text-gray-400 max-w-2xl mx-auto"
+          >
+            {isArabic 
+              ? 'اكتشف كيف ساعدنا الشركات في مختلف الصناعات على تحقيق أهدافها الرقمية من خلال حلول مبتكرة.' 
+              : 'Discover how we\'ve helped businesses across various industries achieve their digital goals through innovative solutions.'}
+          </motion.p>
+        </div>
+
+        {/* Masonry-style Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {portfolioProjects.map((project, index) => (
+            <Link to={`/portfolio/${project.id}`} key={project.id}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-[#8cc63f]/50 transition-all duration-500 ${
+                  index % 3 === 0 ? 'md:col-span-2 md:aspect-[21/9]' : 'aspect-square md:aspect-[4/3]'
+                }`}
+              >
+                <div className="absolute inset-0">
+                  <img
+                    src={project.image}
+                    alt={isArabic ? project.titleAr : project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+                </div>
+
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex gap-3">
+                      <span className="px-4 py-1.5 rounded-full bg-[#8cc63f]/20 text-[#8cc63f] text-sm font-medium backdrop-blur-md border border-[#8cc63f]/20">
+                        {isArabic ? project.categoryAr : project.category}
+                      </span>
+                      <span className="px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-medium backdrop-blur-md border border-white/10">
+                        {isArabic ? project.industryAr : project.industry}
+                      </span>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 border border-white/20">
+                      <ArrowUpRight className="w-6 h-6 text-white rtl:rotate-[-90deg]" />
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-3 group-hover:text-[#8cc63f] transition-colors">
+                    {isArabic ? project.titleAr : project.title}
+                  </h3>
+                  <p className="text-gray-300 line-clamp-2 max-w-2xl">
+                    {isArabic ? project.descriptionAr : project.description}
+                  </p>
+                </div>
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+};

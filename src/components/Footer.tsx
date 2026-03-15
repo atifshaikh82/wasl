@@ -49,7 +49,7 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li><Link to="/about" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.about')}</Link></li>
               <li><a href="/#portfolio" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.portfolio')}</a></li>
-              <li><a href="/#pricing" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.pricing')}</a></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('nav.pricing')}</Link></li>
               <li><a href="/#contact" className="text-gray-400 hover:text-[#8cc63f] transition-colors text-sm">{t('footer.company.contact')}</a></li>
             </ul>
           </div>

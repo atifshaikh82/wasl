@@ -1,0 +1,222 @@
+export const portfolioProjects = [
+  {
+    id: 'fitness-app',
+    title: 'FitLife Pro',
+    titleAr: 'فيت لايف برو',
+    category: 'Mobile App',
+    categoryAr: 'تطبيق جوال',
+    industry: 'Fitness & Gym',
+    industryAr: 'اللياقة البدنية والصالات الرياضية',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop',
+    description: 'A comprehensive fitness tracking and gym management application.',
+    descriptionAr: 'تطبيق شامل لتتبع اللياقة البدنية وإدارة الصالات الرياضية.',
+    challenge: 'The client needed a unified platform to manage gym memberships, class bookings, and provide users with personalized workout plans.',
+    challengeAr: 'احتاج العميل إلى منصة موحدة لإدارة عضويات الصالة الرياضية، وحجوزات الفصول، وتزويد المستخدمين بخطط تمرين مخصصة.',
+    solution: 'We developed a cross-platform mobile app using React Native, integrated with a robust Node.js backend for real-time data synchronization and payment processing.',
+    solutionAr: 'قمنا بتطوير تطبيق جوال عبر المنصات باستخدام React Native، مدمج مع واجهة خلفية قوية بـ Node.js لمزامنة البيانات في الوقت الفعلي ومعالجة المدفوعات.',
+    results: [
+      { label: 'Increase in Bookings', labelAr: 'زيادة في الحجوزات', value: '45%' },
+      { label: 'User Retention', labelAr: 'احتفاظ المستخدمين', value: '80%' },
+      { label: 'App Store Rating', labelAr: 'تقييم متجر التطبيقات', value: '4.8' }
+    ],
+    techStack: ['React Native', 'Node.js', 'MongoDB', 'Stripe']
+  },
+  {
+    id: 'restaurant-pos',
+    title: 'DineSync POS',
+    titleAr: 'داين سينك POS',
+    category: 'Web Application',
+    categoryAr: 'تطبيق ويب',
+    industry: 'Restaurant & Hospitality',
+    industryAr: 'المطاعم والضيافة',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1974&auto=format&fit=crop',
+    description: 'Cloud-based Point of Sale system tailored for multi-location restaurants.',
+    descriptionAr: 'نظام نقاط بيع سحابي مصمم خصيصًا للمطاعم متعددة المواقع.',
+    challenge: 'Managing inventory and orders across multiple restaurant branches was causing delays and inaccuracies.',
+    challengeAr: 'كانت إدارة المخزون والطلبات عبر فروع المطاعم المتعددة تتسبب في تأخيرات وعدم دقة.',
+    solution: 'A custom web-based POS system with real-time inventory tracking, kitchen display system (KDS) integration, and comprehensive analytics.',
+    solutionAr: 'نظام نقاط بيع مخصص قائم على الويب مع تتبع المخزون في الوقت الفعلي، وتكامل نظام عرض المطبخ (KDS)، وتحليلات شاملة.',
+    results: [
+      { label: 'Order Processing Speed', labelAr: 'سرعة معالجة الطلبات', value: '+60%' },
+      { label: 'Inventory Accuracy', labelAr: 'دقة المخزون', value: '99.9%' },
+      { label: 'Locations Scaled', labelAr: 'المواقع التي تم توسيعها', value: '12' }
+    ],
+    techStack: ['React', 'Python', 'PostgreSQL', 'AWS']
+  },
+  {
+    id: 'smart-parking',
+    title: 'ParkEase Solutions',
+    titleAr: 'حلول بارك إيز',
+    category: 'IoT & Software',
+    categoryAr: 'إنترنت الأشياء والبرمجيات',
+    industry: 'Smart City & Parking',
+    industryAr: 'المدن الذكية ومواقف السيارات',
+    image: 'https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=2070&auto=format&fit=crop',
+    description: 'Smart parking management system with real-time availability tracking.',
+    descriptionAr: 'نظام ذكي لإدارة مواقف السيارات مع تتبع التوفر في الوقت الفعلي.',
+    challenge: 'Drivers were spending too much time finding parking spots in busy urban areas, leading to congestion.',
+    challengeAr: 'كان السائقون يقضون وقتًا طويلاً في العثور على أماكن لوقوف السيارات في المناطق الحضرية المزدحمة، مما أدى إلى الازدحام.',
+    solution: 'Integrated IoT sensors with a mobile app and admin dashboard to guide drivers to empty spots and automate payments.',
+    solutionAr: 'دمج مستشعرات إنترنت الأشياء مع تطبيق جوال ولوحة تحكم للمسؤولين لتوجيه السائقين إلى الأماكن الفارغة وأتمتة المدفوعات.',
+    results: [
+      { label: 'Time Saved per User', labelAr: 'الوقت الموفر لكل مستخدم', value: '15 mins' },
+      { label: 'Revenue Increase', labelAr: 'زيادة الإيرادات', value: '30%' },
+      { label: 'Active Users', labelAr: 'المستخدمون النشطون', value: '50k+' }
+    ],
+    techStack: ['Flutter', 'Node.js', 'IoT Protocols', 'Firebase']
+  },
+  {
+    id: 'tech-startup-saas',
+    title: 'CloudFlow Analytics',
+    titleAr: 'كلاود فلو للتحليلات',
+    category: 'SaaS Platform',
+    categoryAr: 'منصة SaaS',
+    industry: 'Tech Startup',
+    industryAr: 'شركة تقنية ناشئة',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+    description: 'Advanced data analytics dashboard for B2B tech companies.',
+    descriptionAr: 'لوحة تحكم متقدمة لتحليلات البيانات لشركات التكنولوجيا B2B.',
+    challenge: 'The startup needed a scalable architecture to process millions of data points and visualize them in real-time.',
+    challengeAr: 'احتاجت الشركة الناشئة إلى بنية قابلة للتطوير لمعالجة ملايين نقاط البيانات وتصورها في الوقت الفعلي.',
+    solution: 'Built a high-performance React frontend with a microservices backend, utilizing GraphQL for efficient data fetching.',
+    solutionAr: 'بناء واجهة أمامية عالية الأداء باستخدام React مع واجهة خلفية للخدمات المصغرة، واستخدام GraphQL لجلب البيانات بكفاءة.',
+    results: [
+      { label: 'Data Processing Speed', labelAr: 'سرعة معالجة البيانات', value: '10x' },
+      { label: 'Client Onboarding', labelAr: 'تأهيل العملاء', value: '+200%' },
+      { label: 'System Uptime', labelAr: 'وقت تشغيل النظام', value: '99.99%' }
+    ],
+    techStack: ['Next.js', 'GraphQL', 'Go', 'Kubernetes']
+  },
+  {
+    id: 'ecommerce-fashion',
+    title: 'Luxe Style Boutique',
+    titleAr: 'بوتيك لوكس ستايل',
+    category: 'E-commerce',
+    categoryAr: 'التجارة الإلكترونية',
+    industry: 'Fashion & Retail',
+    industryAr: 'الأزياء والتجزئة',
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop',
+    description: 'High-end fashion e-commerce platform with AR try-on features.',
+    descriptionAr: 'منصة تجارة إلكترونية للأزياء الراقية مع ميزات التجربة بالواقع المعزز.',
+    challenge: 'High return rates due to customers being unsure about fit and style.',
+    challengeAr: 'معدلات إرجاع عالية بسبب عدم تأكد العملاء من الملاءمة والأناقة.',
+    solution: 'Developed a custom Shopify headless storefront with integrated Augmented Reality (AR) for virtual try-ons.',
+    solutionAr: 'تطوير واجهة متجر Shopify مخصصة بدون رأس مع واقع معزز (AR) مدمج للتجارب الافتراضية.',
+    results: [
+      { label: 'Reduction in Returns', labelAr: 'انخفاض في المرتجعات', value: '40%' },
+      { label: 'Conversion Rate', labelAr: 'معدل التحويل', value: '+25%' },
+      { label: 'Average Order Value', labelAr: 'متوسط قيمة الطلب', value: '+15%' }
+    ],
+    techStack: ['Shopify Plus', 'React', 'Three.js', 'Tailwind CSS']
+  },
+  {
+    id: 'real-estate-portal',
+    title: 'Prime Properties',
+    titleAr: 'برايم للعقارات',
+    category: 'Web Portal',
+    categoryAr: 'بوابة ويب',
+    industry: 'Real Estate',
+    industryAr: 'العقارات',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1973&auto=format&fit=crop',
+    description: 'Comprehensive property listing and management portal.',
+    descriptionAr: 'بوابة شاملة لإدراج وإدارة العقارات.',
+    challenge: 'The client needed a fast, SEO-optimized platform to handle thousands of property listings with advanced filtering.',
+    challengeAr: 'احتاج العميل إلى منصة سريعة ومحسنة لمحركات البحث للتعامل مع آلاف القوائم العقارية مع تصفية متقدمة.',
+    solution: 'Created a Next.js application with server-side rendering for optimal SEO, backed by a robust search engine (Elasticsearch).',
+    solutionAr: 'إنشاء تطبيق Next.js مع عرض من جانب الخادم لتحسين محركات البحث الأمثل، مدعومًا بمحرك بحث قوي (Elasticsearch).',
+    results: [
+      { label: 'Organic Traffic', labelAr: 'الزيارات العضوية', value: '+150%' },
+      { label: 'Lead Generation', labelAr: 'توليد العملاء المحتملين', value: '+85%' },
+      { label: 'Page Load Time', labelAr: 'وقت تحميل الصفحة', value: '< 1s' }
+    ],
+    techStack: ['Next.js', 'Elasticsearch', 'Node.js', 'MongoDB']
+  },
+  {
+    id: 'healthcare-telemed',
+    title: 'CareConnect',
+    titleAr: 'كير كونكت',
+    category: 'Mobile App',
+    categoryAr: 'تطبيق جوال',
+    industry: 'Healthcare',
+    industryAr: 'الرعاية الصحية',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop',
+    description: 'Secure telemedicine platform connecting patients with doctors.',
+    descriptionAr: 'منصة تطبيب عن بعد آمنة تربط المرضى بالأطباء.',
+    challenge: 'Providing a secure, HIPAA-compliant video consultation platform with integrated electronic health records (EHR).',
+    challengeAr: 'توفير منصة استشارات فيديو آمنة ومتوافقة مع HIPAA مع سجلات صحية إلكترونية مدمجة (EHR).',
+    solution: 'Developed a native iOS and Android app with WebRTC for video calls and end-to-end encryption for patient data.',
+    solutionAr: 'تطوير تطبيق iOS و Android أصلي مع WebRTC لمكالمات الفيديو وتشفير شامل لبيانات المرضى.',
+    results: [
+      { label: 'Consultations/Month', labelAr: 'الاستشارات/الشهر', value: '10k+' },
+      { label: 'Patient Satisfaction', labelAr: 'رضا المرضى', value: '98%' },
+      { label: 'Security Breaches', labelAr: 'الخروقات الأمنية', value: '0' }
+    ],
+    techStack: ['Swift', 'Kotlin', 'WebRTC', 'AWS HIPAA']
+  },
+  {
+    id: 'education-lms',
+    title: 'EduLearn Academy',
+    titleAr: 'أكاديمية إديو ليرن',
+    category: 'E-Learning Platform',
+    categoryAr: 'منصة تعليم إلكتروني',
+    industry: 'Education',
+    industryAr: 'التعليم',
+    image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1974&auto=format&fit=crop',
+    description: 'Interactive Learning Management System (LMS) for K-12 students.',
+    descriptionAr: 'نظام إدارة تعلم تفاعلي (LMS) لطلاب الروضة وحتى الصف الثاني عشر.',
+    challenge: 'Engaging students in a remote learning environment with interactive content and progress tracking.',
+    challengeAr: 'إشراك الطلاب في بيئة تعلم عن بعد بمحتوى تفاعلي وتتبع التقدم.',
+    solution: 'Built a gamified LMS with video streaming, interactive quizzes, and real-time progress dashboards for parents and teachers.',
+    solutionAr: 'بناء نظام إدارة تعلم يعتمد على الألعاب مع بث الفيديو، واختبارات تفاعلية، ولوحات تحكم للتقدم في الوقت الفعلي للآباء والمعلمين.',
+    results: [
+      { label: 'Student Engagement', labelAr: 'تفاعل الطلاب', value: '+60%' },
+      { label: 'Course Completion', labelAr: 'إكمال الدورة', value: '85%' },
+      { label: 'Active Users', labelAr: 'المستخدمون النشطون', value: '100k+' }
+    ],
+    techStack: ['Vue.js', 'Laravel', 'MySQL', 'Redis']
+  },
+  {
+    id: 'logistics-tracker',
+    title: 'FleetMaster',
+    titleAr: 'فليت ماستر',
+    category: 'Web & Mobile App',
+    categoryAr: 'تطبيق ويب وجوال',
+    industry: 'Logistics & Supply Chain',
+    industryAr: 'الخدمات اللوجستية وسلسلة التوريد',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop',
+    description: 'Real-time fleet tracking and route optimization software.',
+    descriptionAr: 'برنامج تتبع الأسطول في الوقت الفعلي وتحسين المسار.',
+    challenge: 'High fuel costs and inefficient routing were impacting the logistics company\'s bottom line.',
+    challengeAr: 'كانت تكاليف الوقود المرتفعة والتوجيه غير الفعال تؤثر على أرباح شركة الخدمات اللوجستية.',
+    solution: 'Implemented an AI-driven route optimization algorithm integrated with GPS tracking devices on all vehicles.',
+    solutionAr: 'تنفيذ خوارزمية تحسين المسار تعتمد على الذكاء الاصطناعي مدمجة مع أجهزة تتبع GPS في جميع المركبات.',
+    results: [
+      { label: 'Fuel Costs Reduced', labelAr: 'انخفاض تكاليف الوقود', value: '22%' },
+      { label: 'On-Time Deliveries', labelAr: 'التسليم في الوقت المحدد', value: '95%' },
+      { label: 'Fleet Size Managed', labelAr: 'حجم الأسطول المدار', value: '500+' }
+    ],
+    techStack: ['React', 'Python (AI)', 'Google Maps API', 'PostgreSQL']
+  },
+  {
+    id: 'ai-marketing-campaign',
+    title: 'Visionary Auto',
+    titleAr: 'فيجنري للسيارات',
+    category: 'AI & Marketing',
+    categoryAr: 'الذكاء الاصطناعي والتسويق',
+    industry: 'Automotive',
+    industryAr: 'السيارات',
+    image: 'https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=2069&auto=format&fit=crop',
+    description: 'AI-generated video campaign for a luxury car launch.',
+    descriptionAr: 'حملة فيديو تم إنشاؤها بواسطة الذكاء الاصطناعي لإطلاق سيارة فاخرة.',
+    challenge: 'Creating high-end promotional videos without the massive budget of a traditional physical car shoot.',
+    challengeAr: 'إنشاء مقاطع فيديو ترويجية راقية دون الميزانية الضخمة لجلسة تصوير سيارات مادية تقليدية.',
+    solution: 'Utilized generative AI video tools to create photorealistic, dynamic promotional materials tailored for social media.',
+    solutionAr: 'استخدام أدوات فيديو الذكاء الاصطناعي التوليدي لإنشاء مواد ترويجية ديناميكية وواقعية مصممة لوسائل التواصل الاجتماعي.',
+    results: [
+      { label: 'Production Cost Saved', labelAr: 'توفير تكلفة الإنتاج', value: '70%' },
+      { label: 'Social Engagement', labelAr: 'التفاعل الاجتماعي', value: '+300%' },
+      { label: 'Pre-orders Generated', labelAr: 'الطلبات المسبقة المولدة', value: '1,200+' }
+    ],
+    techStack: ['Midjourney', 'RunwayML', 'Premiere Pro', 'After Effects']
+  }
+];

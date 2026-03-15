@@ -9,6 +9,10 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { PricingPage } from './pages/PricingPage';
+import { ServicePage } from './pages/ServicePage';
+import { PortfolioPage } from './pages/PortfolioPage';
+import { CaseStudyPage } from './pages/CaseStudyPage';
 import { ScrollToTop } from './components/ScrollToTop';
 import { LanguageProvider } from './context/LanguageContext';
 
@@ -22,6 +26,10 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/services/:serviceId" element={<ServicePage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/portfolio/:id" element={<CaseStudyPage />} />
           </Routes>
           <Footer />
         </div>
