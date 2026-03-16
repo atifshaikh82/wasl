@@ -33,7 +33,7 @@ export const About = () => {
     {
       name: t('about.t1.name'),
       role: t('about.t1.role'),
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400&h=400"
+      image: "/atif.png" // Please upload your image as 'atif.png' in the 'public' folder
     },
     {
       name: t('about.t2.name'),

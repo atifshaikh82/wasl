@@ -47,7 +47,7 @@ export const PortfolioPage = () => {
           </motion.p>
         </div>
 
-        {/* Masonry-style Grid */}
+        {/* Uniform Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {portfolioProjects.map((project, index) => (
             <Link to={`/portfolio/${project.id}`} key={project.id}>
@@ -56,9 +56,7 @@ export const PortfolioPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-[#8cc63f]/50 transition-all duration-500 ${
-                  index % 3 === 0 ? 'md:col-span-2 md:aspect-[21/9]' : 'aspect-square md:aspect-[4/3]'
-                }`}
+                className="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/10 hover:border-[#8cc63f]/50 transition-all duration-500 aspect-square md:aspect-[4/3]"
               >
                 <div className="absolute inset-0">
                   <img
@@ -67,30 +65,45 @@ export const PortfolioPage = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/10 opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex gap-3">
+                <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                  {/* Top Section: Tags & Icon */}
+                  <div className="flex items-start justify-between">
+                    <div className="flex flex-wrap gap-3">
                       <span className="px-4 py-1.5 rounded-full bg-[#8cc63f]/20 text-[#8cc63f] text-sm font-medium backdrop-blur-md border border-[#8cc63f]/20">
                         {isArabic ? project.categoryAr : project.category}
                       </span>
                       <span className="px-4 py-1.5 rounded-full bg-white/10 text-white text-sm font-medium backdrop-blur-md border border-white/10">
                         {isArabic ? project.industryAr : project.industry}
                       </span>
+                      {project.id === 'halal-first' && (
+                        <span className="px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-400 text-sm font-medium backdrop-blur-md border border-blue-500/20">
+                          {isArabic ? 'قيد التطوير' : 'Under Development'}
+                        </span>
+                      )}
                     </div>
-                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 border border-white/20">
+                    <div className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 border border-white/20 shrink-0 ml-4">
                       <ArrowUpRight className="w-6 h-6 text-white rtl:rotate-[-90deg]" />
                     </div>
                   </div>
                   
-                  <h3 className="text-3xl md:text-4xl font-display font-bold text-white mb-3 group-hover:text-[#8cc63f] transition-colors">
-                    {isArabic ? project.titleAr : project.title}
-                  </h3>
-                  <p className="text-gray-300 line-clamp-2 max-w-2xl">
-                    {isArabic ? project.descriptionAr : project.description}
-                  </p>
+                  {/* Bottom Section: Title & Description */}
+                  <div className="mt-auto">
+                    {/* Project Name (Big) */}
+                    <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-2 group-hover:text-[#8cc63f] transition-colors">
+                      {isArabic ? project.projectNameAr : project.projectName}
+                    </h2>
+                    {/* Project Title/Hook (Medium) */}
+                    <h3 className="text-xl md:text-2xl font-medium text-gray-200 mb-4 line-clamp-2">
+                      {isArabic ? project.titleAr : project.title}
+                    </h3>
+                    {/* Project Description (Small) */}
+                    <p className="text-gray-400 line-clamp-2 max-w-2xl">
+                      {isArabic ? project.descriptionAr : project.description}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </Link>

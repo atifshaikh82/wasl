@@ -75,14 +75,15 @@ export const Portfolio = () => {
                     ))}
                   </div>
                 </div>
-                <div className="flex items-center justify-between">
+                <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="text-2xl font-display font-bold text-white mb-2 group-hover:text-[#8cc63f] transition-colors">
-                      {isArabic ? project.titleAr : project.title}
+                    <h3 className="text-3xl font-display font-bold text-white mb-2 group-hover:text-[#8cc63f] transition-colors">
+                      {isArabic ? project.projectNameAr : project.projectName}
                     </h3>
-                    <p className="text-gray-400">{isArabic ? project.categoryAr : project.category}</p>
+                    <p className="text-gray-300 font-medium mb-1 line-clamp-1">{isArabic ? project.titleAr : project.title}</p>
+                    <p className="text-gray-500 text-sm">{isArabic ? project.categoryAr : project.category}</p>
                   </div>
-                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#8cc63f] group-hover:text-black transition-all duration-300">
+                  <div className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#8cc63f] group-hover:text-black transition-all duration-300 shrink-0 ml-4">
                     <ArrowUpRight className="w-5 h-5 rtl:rotate-[-90deg]" />
                   </div>
                 </div>
